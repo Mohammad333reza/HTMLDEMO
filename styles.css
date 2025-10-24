@@ -1,0 +1,182 @@
+*{           /*affects all the elements in the page */
+    margin:0;
+    padding:0;
+    box-sizing:border-box;  
+}
+/*When the box-sizing is border box that implies that height & width 
+of a box is a certain numbe rincluding border of the box*/
+body{
+    background: rgb(142,80,90);
+    color:white;
+    /* padding: 14px; */
+    min-height: 100vh;
+    display:flex;          /*to use flex direction, first flex must be written
+    , flex sorts elements in the row by default.*/
+    flex-direction:column;
+    gap: 14px;/*determine the space only around elements*/
+    font-family: sns-serif,'Times  New Roman', Times, serif;
+}
+
+header{
+     display:flex;  /* containing in a row*/
+     align-items:center;
+     justify-content:space-between;/*it ditribute the area of the flex container 
+     among the elements in the flex container(by default is row)*/
+    padding:14px;
+}
+
+nav,section{
+    display:flex;
+    align-items:center;
+    gap: 14px; 
+/* the area is applied after margin*/
+
+
+}
+header section img{
+    max-width:40px;
+    border-radius:50%;
+    border: 2px solid rgb(43, 188, 130);
+
+
+}
+.whiteLink{
+    color:rgb(205, 143, 143);
+
+}
+.greyLink{
+    color:lightgrey;
+}
+
+a{
+    text-decoration:unset; /*removes the underline*/
+    font-size:0.8em;
+}
+a:hover{ /*hover: puting the curser on it*/
+    text-decoration: underline;
+}
+main{
+    flex:1;  /*only works if the prent that here is body is flex& with 1 main takes totall view height that is 100vh'*/
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:24px;
+    padding:0 14px;
+    
+}
+.header-text{
+    font-size: 4em;
+    font-family:'Times new  roman', Times, serif;
+    color:white;
+
+}
+.searchbar{
+    display:flex;
+    width:100%;
+    max-width:700px;
+    margin:0 auto;
+    gap:14px;
+    border: 1px solid grey;
+    padding:10px;
+    border-radius: 24px;  /*curve the corners, in some cases outline could do the same thing like border, but 
+    making curved corner is only possible with border*/
+ 
+
+}
+.searchbar:hover{
+    border-color: transparent; /*transparent:invisible*/
+
+}
+.iconButtonContainer{
+    display:flex;
+    align-items: center;
+    gap:14px;
+
+
+
+
+}
+.iconButton{
+
+    background:transparent;
+    border:none;
+    color:white;
+    font-size:1.2em;
+    cursor:pointer;
+
+}
+
+input{
+    background: transparent;
+    outline:none;
+    border:unset;
+    color:white;
+    flex:1; /*flex item is an element that is inside the flex container, and the percentage of 
+    it's increasing or decreasing depend's onthe percentage of increasing or decreasing 
+    of the fles container*/
+
+}
+.searchButtonsContainer{
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+
+}
+
+.searchButtonsContainer button{
+    padding:10px 14px;
+    border-radius:4px;
+    background: rgb(49, 17, 145);
+    border:1px solid transparent;                      /*unset:resets a property to its inherited value if the property naturally inherits from its parent, and to its initial value if not. */
+    color:white;
+    cursor:pointer;
+
+
+
+}
+.searchButtonsContainer button:hover{
+    border: 1px solid darkslategrey;
+
+
+}
+.LanguageSelection{
+    font-size: 1.0em;
+
+
+}
+.LanguageSelection span{
+    color:rgb(25, 178, 178);
+}
+footer{
+
+    display:flex;
+    flex-direction:column;
+    
+}
+footer>section{
+    padding:14px;
+}
+footer > section:last-child{ /*">"determine the type of element, & "i" deterimine which one of teh type.*/
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:space-around;
+    border-top: 1px solid darkgrey;
+}
+.footerLink{
+    display:flex;
+    align-items:center;
+    gap: 14px;
+
+}
+.footerLink a {
+   cursor:pointer; 
+}
+@media (min-width:540px) {
+    footer>section:last-child{
+        flex-direction:row;
+
+    }
+}
